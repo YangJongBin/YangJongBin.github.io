@@ -31,8 +31,10 @@
 			camera.position.set( 20, 20, 20 ); // all components equal
 			camera.lookAt( scene.position ); // or the origin
 
-			const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-			scene.add( directionalLight );
+			const light = new THREE.PointLight(0xffffff, 6, 40)
+			
+			light.position.set(10, 20, 15)
+			scene.add(light)
 
 			function animate() {
 				requestAnimationFrame( animate );
